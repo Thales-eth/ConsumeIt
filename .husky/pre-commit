@@ -1,0 +1,5 @@
+prettier --config .prettierrc $(git diff --cached --name-only --diff-filter=ACMR | sed 's| |\\ |g') --write --ignore-unknown
+git update-index --again
+
+yarn run build
+yarn run lint

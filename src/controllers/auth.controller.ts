@@ -3,6 +3,8 @@ import { createDBUser, findDBUserByEmail } from '@repositories/user.repository';
 import { UserRole } from '@prisma/client';
 import { BaseError } from '@errors/base.error';
 import { setCustomClaims, validateToken } from '@services/firebase.service';
+import { EMAIL_VALIDATION } from '@validations/firebase.validation';
+import { sendAuthLinkEmail } from '@services/nodemailer.service';
 
 export const signUpController = async (req: Request, res: Response, next: NextFunction) => {
 	try {
@@ -27,6 +29,20 @@ export const signUpController = async (req: Request, res: Response, next: NextFu
 		}
 
 		res.status(200).json({ user });
+	} catch (error) {
+		next(error);
+	}
+};
+
+export const sendAuthLinkController = async (req: Request, res: Response, next: NextFunction) => {
+	try {
+		const { email } = await EMAIL_VALIDATION.validateAsync(req.body);
+
+		const link = await generateAuthLink(email);
+
+		await sendAuthLinkEmail(email, link);
+
+		res.sendStatus(200);
 	} catch (error) {
 		next(error);
 	}

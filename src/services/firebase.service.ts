@@ -1,3 +1,4 @@
+import { actionCodeSettings } from '@constants/firebase';
 import { firebase } from '@loaders/firebase.loader';
 import type { auth } from 'firebase-admin';
 
@@ -19,10 +20,6 @@ export const validateToken = async (token: string): Promise<auth.DecodedIdToken>
 export const deleteFirebaseUser = (id_firebase: string): Promise<void> =>
 	firebase.auth().deleteUser(id_firebase);
 
-export const verifyEmailUserFirebase = async (email: string): Promise<boolean> => {
-	const user = await firebase
-		.auth()
-		.getUserByEmail(email)
-		.catch(() => null);
-	return !!user;
+export const generateAuthLink = async (email: string): Promise<string> => {
+	return await firebase.auth().generateSignInWithEmailLink(email, actionCodeSettings);
 };

@@ -2,8 +2,8 @@ import { NextFunction, Request, Response } from 'express';
 import { createDBUser, findDBUserByEmail } from '@repositories/user.repository';
 import { UserRole } from '@prisma/client';
 import { BaseError } from '@errors/base.error';
-import { setCustomClaims, validateToken } from '@services/firebase.service';
-import { EMAIL_VALIDATION } from '@validations/firebase.validation';
+import { generateAuthLink, setCustomClaims, validateToken } from '@services/firebase.service';
+import { EMAIL_VALIDATION } from '@validations/common.validation';
 import { sendAuthLinkEmail } from '@services/nodemailer.service';
 
 export const signUpController = async (req: Request, res: Response, next: NextFunction) => {

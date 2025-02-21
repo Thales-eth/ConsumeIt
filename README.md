@@ -1,6 +1,6 @@
 # ConsumeIt
 
-🚀 **ConsumeIt** is a backend scaffolding template designed to help developers quickly set up a scalable and maintainable backend for their web applications. Built with industry-standard technologies, this template is optimized for fast development, offering a flexible foundation for your server-side needs. It is preferably used in conjunction with ![BuildIt](https://github.com/Thales-eth/BuildIt)
+🚀 **ConsumeIt** is a backend scaffolding template designed to help developers quickly set up a scalable and maintainable backend for their web applications. Built with industry-standard technologies, this template is optimized for fast development, offering a flexible foundation for your server-side needs. It is preferably used in conjunction with [BuildIt](https://github.com/Thales-eth/BuildIt)
 
 ### Technologies Used
 

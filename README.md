@@ -1,4 +1,24 @@
-# Scaffolding Backend
+# ConsumeIt
+
+🚀 **ConsumeIt** is a backend scaffolding template designed to help developers quickly set up a scalable and maintainable backend for their web applications. Built with industry-standard technologies, this template is optimized for fast development, offering a flexible foundation for your server-side needs.
+
+### Technologies Used
+
+#### Core Framework & Language
+- **TypeScript**  
+  ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+- **Node.js**  
+  ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+- **Express**  
+  ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
+
+#### Database & ORM
+- **Prisma**  
+  ![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+  
+#### Authentication & Deployment
+- **Firebase**
+  ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white)
 
 <!-- TABLE OF CONTENTS -->
 <details>
